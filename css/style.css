@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  background-color: #b6b6b6;
+  font-family: 'Roboto', sans-serif;
+}
+
+.calculator-container {
+  background-color: black;
+  height: 400px;
+  padding: 10px;
+  width: 230px;
+  gap: 10px;
+  border-radius: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: 100px (1fr)[5];
+      grid-template-rows: 100px repeat(5, 1fr);
+      grid-template-areas: "input input input input" "all-clear clears percent divide" "seven eight nine multiply" "four five six minus" "one two three plus" "zero zero decimal equals";
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  border: none;
+  font-weight: bold;
+}
+
+.btn-number {
+  background-color: #323232;
+  color: #E0E0E0;
+}
+
+.btn-number:hover {
+  background-color: #636363;
+}
+
+.btn-operators {
+  background-color: #FE9F09;
+  color: #fff;
+}
+
+.btn-operators:hover {
+  background-color: rgba(254, 161, 11, 0.7);
+}
+
+.btn-grey {
+  background-color: #A5A5A5;
+  color: #040404;
+}
+
+.btn-grey:hover {
+  background-color: #bebebe;
+}
+
+.input {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: input;
+  border: none;
+  background-color: #646464;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 50px;
+  overflow-x: scroll;
+  text-align: right;
+  word-wrap: break-word;
+}
+
+.clear {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: clears;
+}
+
+.all-clear {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: all-clear;
+}
+
+.percent {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: percent;
+}
+
+.divide {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: divide;
+}
+
+.seven {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: seven;
+}
+
+.eight {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: eight;
+}
+
+.nine {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: nine;
+}
+
+.multiply {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: multiply;
+}
+
+.four {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: four;
+}
+
+.five {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: five;
+}
+
+.six {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: six;
+}
+
+.minus {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: minus;
+}
+
+.one {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: one;
+}
+
+.two {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: two;
+}
+
+.three {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: three;
+}
+
+.plus {
+  -ms-grid-row: 5;
+  -ms-grid-column: 4;
+  grid-area: plus;
+}
+
+.zero {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: zero;
+  width: 110px;
+  border-radius: 100px;
+}
+
+.decimal {
+  -ms-grid-row: 6;
+  -ms-grid-column: 3;
+  grid-area: decimal;
+}
+
+.equals {
+  -ms-grid-row: 6;
+  -ms-grid-column: 4;
+  grid-area: equals;
+}
